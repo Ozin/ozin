@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="keywords" content="Pfadfinder Hohenlinden, Stamm Impeesa, Pfadfinder, Hohenlinden, Stamm, Impeesa, Termine, Kontakt, Fotos, Pfadiwissen, Downloads"
+	/>
+	<title>Stamm Impeesa | DPSG Hohenlinden</title>
+
+	<style type="text/css">
+		@media(min-width: 640px) {
+			.press {
+				column-count: 2;
+			}
+		}
+
+		@media(min-width: 1000px) {
+			.press {
+				column-count: 3;
+			}
+		}
+
+		body {
+			background: #E3E3E3;
+			color: rgba(0, 0, 0, .75);
+			font-family: 'Open Sans', sans-serif;
+			font-weight: lighter;
+			padding: 0;
+			margin: 0;
+		}
+
+		a {
+			color: #216823;
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: #1EAB11;
+			text-decoration: underline;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-family: 'Raleway', sans-serif;
+			font-weight: lighter;
+		}
+
+		h2 {
+			font-size: 3em;
+		}
+
+		h3 {
+			font-size: 1.5em;
+		}
+
+		.menu__hidden-checkbox,
+		.menu__sandwich-button {
+			position: fixed;
+			top: 0;
+			left: 0;
+			margin: 10px;
+		}
+
+		.menu__hidden-checkbox {
+			display: block;
+			z-index: 2;
+			width: 40px;
+			height: 40px;
+			opacity: 0;
+		}
+
+		.menu__sandwich-button {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			z-index: 1;
+			padding: 10px;
+			width: 20px;
+			height: 20px;
+			background: #FFF;
+		}
+
+		.menu__sandwich-button span:first-child {
+			margin: 0;
+		}
+
+		.menu__sandwich-button span {
+			display: block;
+			width: 100%;
+			height: 2px;
+			background: rgba(0, 0, 0, .75);
+			transition: all .2s;
+		}
+
+		.menu__hidden-checkbox:not(:checked)~.menu {
+			transform: translateX(-100%);
+		}
+
+		.menu__hidden-checkbox:checked~.menu__sandwich-button span:nth-child(1) {
+			transform: rotate(45deg);
+			transform-origin: 0%;
+		}
+
+		.menu__hidden-checkbox:checked~.menu__sandwich-button span:nth-child(2) {
+			opacity: 0;
+		}
+
+		.menu__hidden-checkbox:checked~.menu__sandwich-button span:nth-child(3) {
+			transform: rotate(-45deg);
+			transform-origin: 0%;
+		}
+
+		.menu {
+			transition: transform .2s;
+			position: fixed;
+			display: flex;
+			flex-direction: column;
+			overflow: auto;
+			top: 0;
+			left: 0;
+			height: 100%;
+		}
+
+		.menu>* {
+			padding: 10px;
+			margin: 0;
+		}
+
+		.menu a {
+			display: block;
+			min-width: 20em;
+		}
+
+		.menu__top {
+			order: 1;
+		}
+
+		.menu__main {
+			border-bottom: 1px solid #E3E3E3;
+			margin-top: 40px;
+		}
+
+		.menu ul li {
+			list-style: none;
+		}
+
+		.menu a {
+			padding: 10px;
+		}
+
+		.menu a:hover {
+			background: #E3E3E3;
+		}
+
+		header,
+		header a {
+			margin-left: 2vw;
+		}
+
+		header h1 {
+			position: relative;
+			font-size: 7vw;
+		}
+
+		header img {
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 0;
+			width: 58vw;
+			transform: translate(-31.5%, -32.7%);
+		}
+
+		.kehrmichum {
+			direction: rtl;
+			unicode-bidi: bidi-override;
+		}
+
+		.main>div {
+			padding: 40px;
+			margin: 40px;
+		}
+
+		.main>div,
+		nav {
+			background: #FFF;
+			box-shadow: 5px 5px 5px rgba(0, 0, 0, .4);
+		}
+
+		.main>div img {
+			display: block;
+			width: calc(100% + 80px);
+			margin-left: -40px;
+		}
+
+		.main>div p {
+			hyphens: auto;
+		}
+
+		.icaption strong {
+			display: block;
+			text-align: center;
+		}
+		
+		.pagination ul {
+			padding: 0;
+			margin: 0;
+			display: flex;
+			align-items: stretch;
+		}
+		
+		.pagination li {
+			list-style: none; 
+			flex: 1 0 auto;
+		}
+		
+		.pagination a {
+			padding: 20px 0;
+			display: block;
+			text-align: center;
+			
+		}
+	</style>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Roboto|Roboto+Condensed" rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		<h1>
+			<a href="http://www.dpsg-hohenlinden.de/home" class="blank">Stamm Impeesa</a>
+			<img src="http://www.dpsg-hohenlinden.de/images/logo.gif" alt="logo" class="logo" />
+		</h1>
+	</header>
+	<input type="checkbox" class="menu__hidden-checkbox" />
+	<div class="menu__sandwich-button">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	<nav class="menu">
+		<ul class="menu__top">
+			<li><a href="http://forum.dpsg-hohenlinden.de">Forum</a></li>
+			<li><a href="http://www.dpsg-hohenlinden.de/team">Team</a></li>
+			<li><a href="http://www.dpsg-hohenlinden.de/links">Links</a></li>
+			<li><a href="http://www.dpsg-hohenlinden.de/impressum">Impressum</a></li>
+		</ul>
+		<ul class="menu__main">
+			<li class="active"><a href="http://www.dpsg-hohenlinden.de/home/">Home</a></li>
+			<li><a href="http://www.dpsg-hohenlinden.de/termine/">Termine</a></li>
+			<li><a href="http://www.dpsg-hohenlinden.de/stamm/">Der Stamm</a></li>
+			<li><a href="http://www.dpsg-hohenlinden.de/bilder/">Bilder</a></li>
+			<li><a href="http://www.dpsg-hohenlinden.de/pfadiwiki/">PfadiWiki</a></li>
+			<li><a href="http://www.dpsg-hohenlinden.de/kontakt/">Kontakt</a></li>
+		</ul>
+	</nav>
+	<div class="main">
+		<div role="article" class="newsArticle" id="press_54">
+			<div class="postDate"><span><a href="http://www.dpsg-hohenlinden.de/home/press/54">03. August 2017</a></span></div>
+			<h2 class="articleHeadline"><span>BeSoLa 2017</span></h2>
+			<div class="article bg">
+				<h3>Vorbereitungen für die geplante Mondlandung laufen</h3>
+				<p class="icaption"> <a class="nobg zoomInCursor" href="http://www.dpsg-hohenlinden.de/files/2017/08/201708031345_DSC05013.JPG"><img src="http://www.dpsg-hohenlinden.de/IMGresize/w860/files/2017/08/201708031345_DSC05013.JPG" alt=""/></a>					</p>
+				<p class="press">Bald ist es soweit – am kommenden Samstag, den 05.08.2017, machen sich 268 Pfadfinderinnen und Pfadfinder des DPSG Bezirks
+					Ebersberg auf zum gemeinsamen Bezirkssommerlager. Unter dem Motto „Mondlandung“ werden sie eine Woche lang ihre Zelte
+					in Bergstetten bei Donauwörth aufschlagen.<br /> Die Planungen für das gemeinsame Sommerlager der Pfadfinderstämme Impeesa
+					Hohenlinden, Marinus Rott, St. Joseph Kirchseeon, St. Sebastian Grafing und Windrose Anzing/Poing begannen im März 2016.
+					Seitdem gab es unzählige Treffen der acht verschiedenen Arbeitskreise, bei denen es neben den Programminhalten auch
+					um Infrastruktur, Spiritualität und Krisenmanagement geht. Jetzt, fast eineinhalb Jahre später, sind so gut wie alle
+					organisatorischen Punkte abgeschlossen. Der Transport des gesamten Materials ist geregelt, die Lagerhefte und Lagerabzeichen
+					sind rechtzeitig geliefert worden und das Programm steht. Großer Dank gilt dem Transportunternehmen „Leo Prünster“ aus
+					Hohenlinden für die großzügige Unterstützung mit einem 40-Tonner.<br /> Da das letzte Bezirkssommerlager 2009 war, soll
+					das Programm dieses Jahr ein richtiges Highlight werden. Unter dem Motto „Mondlandung“ werden die Kinder und Jugendlichen
+					von ihrer „Mondbasis“ aus die ferne und fremde Galaxie „BeSoLaris“ erkunden. Dort erwarten sie viele Abenteuer sowohl
+					am Tag als auch bei Nacht. Unter anderem wird es einen Workshop-Tag, ein großes Geländespiel und viel Programm innerhalb
+					der jeweils eigenen Altersstufe geben. All diese Programmpunkte drehen sich darum, neues Raumfahrerwissen zu erlangen
+					und kniffelige Rätsel durch Kooperation zu lösen. Sowohl Kinder und Jugendliche als auch Leiter freuen sich auf eine
+					spannende Woche mit vielen neuen Eindrücken und unvergesslichen Momenten. Ziel des Lagers sei es demnach auch, so Bezirksvorstand
+					Christian Seemüller, dass Austausch zwischen den fünf Stämmen stattfindet und Freundschaften entstehen, die gerade in
+					der Zeit nach dem Lager für ein positives Miteinander sorgen.<br /> Wer mehr dazu erfahren möchte, kann die Homepage
+					des Bezirkssommerlagers unter www.besola.de besuchen</p>
+			</div>
+		</div>
+		<div role="article" class="newsArticle" id="news_325">
+			<div class="postDate"><span><a href="http://www.dpsg-hohenlinden.de/home/details/325">09. Juni 2017</a></span></div>
+			<h2 class="articleHeadline"><span>Lust auf Pfadfinder?! - Anmeldung bis 25. Juli</span></h2>
+			<div class="article bg">
+				<p><a href="http://www.dpsg-hohenlinden.de/files/2017/06/2017-lust-auf-pfadfinder.pdf">Hier gibt es die Anmeldung als PDF</a></p>
+				<p>Im September starten wir wieder mit den <strong>Gruppenstunden der Pfadfinder</strong>. Wenn du auch Lust hast, Pfadfinder
+					zu werden, dann kannst du nach erfolgreicher Anmeldung ab 26. September in die jeweiligen Gruppenstunden kommen.</p>
+				<ul>
+					<li>Wölflinge (7-9 Jahre), treffen sich montags um 18:00 Uhr</li>
+					<li>Jungpfadfinder ab (10-12 Jahre) mittwochs um 18:30 Uhr</li>
+					<li>Pfadfinder (13-15 Jahre) montags um 19:30 Uhr</li>
+					<li>Rover (16-20 Jahre) montags um 19:30 Uhr</li>
+				</ul>
+				<p>Die Gruppenstunden finden im Pfarrheim Hohenlinden statt (Dauer 90 Min.)</p>
+				<p>Wenn ihr Lust habt dabei zu sein, oder ihr euch noch nicht sicher seit, ob euch Pfadfinderei gefällt, dann kommt doch
+					in den Juliwochen bei uns Schnuppern. <br /> Bitte meldet euch vorher unbedingt unter folgenden E-Mail-Adressen an:
+				</p>
+				<p><strong>Anmeldung für Neue Wölflinge:</strong></p>
+				<ul>
+					<li><a class="kehrmichum">ed.nednilnehoh-gspd@seow</a></li>
+				</ul>
+				<p>Anmeldungen bitte bis 25. Juli, die freiwerdenden Plätze werden unter den Interessenten verlost, da sonst die Wölflingsgruppe
+					zu groß wird.</p>
+				<p><strong>Anmeldung für Quereinsteiger:</strong><br /> Bitte meldet euch bei der für euch zutreffenden Emailadresse.</p>
+				<ul>
+					<li>Jungpfadfinder: <a class="kehrmichum">ed.nednilnehoh-gspd@sifpuj</a></li>
+					<li>Pfadfinder: <a class="kehrmichum">ed.nednilnehoh-gspd@sidafp</a></li>
+					<li>Rover: <a class="kehrmichum">ed.nednilnehoh-gspd@revor</a></li>
+				</ul>
+				<p style="text-align:center">Wir freuen uns auf euch!<br /> Eure Pfadfinder-Gruppenleiter</p><br />
+			</div>
+		</div>
+		<div role="article" class="newsArticle" id="news_324">
+			<div class="postDate"><span><a href="http://www.dpsg-hohenlinden.de/home/details/324">12. Mai 2017</a></span></div>
+			<h2 class="articleHeadline"><span>Ausgabe 1/17 Impeesant_Newsletter</span></h2>
+			<div class="article bg"><a href="http://www.dpsg-hohenlinden.de/files/documents/1_17-Impeesant_Newsletter.pdf" style="text-align:center"><img style="width: 100%" src="http://www.dpsg-hohenlinden.de/files/documents/1_17-Impeesant_Newsletter.JPG" alt="Ausgabe 1/17 Impeesant_Newsletter"/><br />
+--> als PDF</a></div>
+		</div>
+		<div role="article" class="newsArticle" id="press_53">
+			<div class="postDate"><span><a href="http://www.dpsg-hohenlinden.de/home/press/53">12. Dezember 2016</a></span></div>
+			<h2 class="articleHeadline"><span>Friedenslicht aus Betlehem 2016</span></h2>
+			<div class="article bg">
+				<h3>Pfadfinder aus Hohenlinden holen Friedenslicht in München ab</h3>
+				<p class="icaption"> <a class="nobg zoomInCursor" href="http://www.dpsg-hohenlinden.de/files/2016/12/201612121407_Friedenslicht_2016_Gruppenfoto.jpg"><img src="http://www.dpsg-hohenlinden.de/IMGresize/w860/files/2016/12/201612121407_Friedenslicht_2016_Gruppenfoto.jpg" alt=""/></a>					</p>
+				<p class="press">Das Friedenslicht aus Betlehem hat wieder eine weite Reise hinter sich gebracht. Am Sonntag des dritten Advents wurde
+					in der Frauenkirche in München das Licht an die Pfadfinder und Pfadfinderinnen weitergegeben. Entzündet wurde die Flamme
+					in Betlehem. Anschließend fand es seinen Weg über Wien nach Europa und jetzt nach Hohenlinden. Die Friedenslichtaktion
+					2016 steht in Deutschland unter dem Motto: „Frieden: Gefällt mir – ein Netz verbindet alle Menschen guten Willens“ und
+					will damit ein Zeichen für ein friedliches Miteinander setzen. Landesbischof Heinrich Bedford-Strohm wies die Gottesdienstbesucher
+					in seiner Predigt daraufhin, dass schon Kleinigkeiten im Alltag den Anfang eines friedlichen Miteinanders ausmachen.
+					So etwa, wenn wir darauf aufmerksam machen, dass es jemanden nicht gut geht und wir damit auch aktiv gegen Mobbing vorgehen.
+					Wer das Licht empfängt, kann damit selbst die Kerzen von Freunden und Bekannten entzünden, damit an vielen Orten ein
+					Schimmer des Friedens erfahrbar wird, auf den die Menschen in der Weihnachtszeit besonders hoffen.<br />
+					<br /> Auch in diesem Jahr wollen wir das Licht und somit ein Zeichen des Friedens an die Gemeinde weitergeben:<br />					24.12.2016 16 Uhr in der St. Joseph Kirche (kath. Kinder-Krippenfeier)<br /> 24.12.2016 17 Uhr in der Mariä Heimsuchungs
+					Kirche (ev. Gottesdienst)<br /> 24.12.2016 21 Uhr in der St. Joseph Kirche (kath. Christmette)<br />
+					<br /> Wer das Licht empfangen will, sollte am besten ein Windlicht mitbringen.<br /> In der Kinder-Krippenfeier und
+					in der Christmette werden zusätzlich noch kleine Friedenslichtkerzen für zwei Euro verkauft. Der Erlös kommt unserem
+					Stamm zu Gute.</p>
+			</div>
+		</div>
+		<div role="article" class="newsArticle" id="press_52">
+			<div class="postDate"><span><a href="http://www.dpsg-hohenlinden.de/home/press/52">02. September 2016</a></span></div>
+			<h2 class="articleHeadline"><span>08/16 Man ist das Wurzel</span></h2>
+			<div class="article bg">
+				<h3>Sommerlagerbericht der Hohenlindener Pfadfinder</h3>
+				<p class="icaption"> <a class="nobg zoomInCursor" href="http://www.dpsg-hohenlinden.de/files/2016/09/201609021306_SoLa_2016_Gruppenfoto.jpg"><img src="http://www.dpsg-hohenlinden.de/IMGresize/w860/files/2016/09/201609021306_SoLa_2016_Gruppenfoto.jpg" alt=""/></a>					</p>
+				<p class="press">In der letzten Augustwoche machten sich 60 Pfadfinderinnen und Pfadfinder des Stamms Impeesa zu Fuß oder mit dem Rad
+					von Hohenlinden auf ins 15 km entfernte Lengdorf. Unter dem Motto „08/16 Man ist das Wurzel“ fand dort das diesjährige
+					Sommerlager statt. <br /> Man wollte mal wieder ein einfaches Sommerlager veranstalten, so wie früher, „Back to the
+					roots“ – und somit wurde an den ersten drei Tagen gebaut und konstruiert bis die Seile ausgingen. Am Ende des dritten
+					Tages standen dann ein Lagerturm, ein Lagertor, eine Waschstation, eine Dusche, eine Müllstation, ein Volleyballfeld,
+					Sitzgelegenheiten, ein Pizzaofen, ein Raketenofen und eine Seilbrücke. Was man nicht alles erreichen kann, wenn alle
+					zusammen helfen.<br /> Um sich etwas zu erholen, stand am nächsten Tag Singen und viel Freizeit auf dem Programm. Zu
+					meist wurde die Freizeit dazu genutzt zu spielen oder sich im Mehnbach, einem kleinen Zufluss der Isen, abzukühlen,
+					was bei dem heißen Wetter auch bitter nötig war. Ein Highlight des Sommerlagers war das Abendessen an diesem Tag. Es
+					gab ein Spanferkel, das sich den ganzen Tag über gedreht hatte, angetrieben durch eine selbst gebaute Fahrradkonstruktion.<br
+					/> Am folgenden Tag hatten die verschiedenen Altersstufen jeweils ihr eigenes Programm. Die Wölflinge (7-10 Jährigen)
+					veranstalteten eine Bayrische Olympiade und die Jungpfadfinder (10-13 Jährigen) mussten zusammen eine Schnitzeljagd
+					meistern, um sich die Materialien für eine Plastikplanen-Wasserrutsche zu erarbeiten. Die Pfadfinder (13-16 Jährigen)
+					verbrachten den Vormittag damit Pizza zu backen und abends war dann Action in Form eines Nachtgeländespiels geboten.
+					Die Rover (16-20 Jährigen) fuhren mit dem Rad samt Schlauchboot Richtung Wifling, um von dort aus ein wenig auf der
+					Sempt zu paddeln.<br /> Am nächsten Tag begab man sich in die Zeit der alten Kelten. Bei einer Führung lernten die Kinder
+					und Jugendlichen wie die Herrschaftsgebiete vor ca. 400 Jahren verteilt waren und durften selbst anhand historischer
+					Karten Grenzsteine und Spuren der alten Kelten suchen.<br /> Um der sengenden Hitze ein wenig zu entfliehen, verbrachten
+					sie den darauf folgenden Tag im kühlen Wald. Verschiedene Bäume wurden gesucht und identifiziert und das Alter der Bäume
+					anhand der Jahresringe geschätzt. Die Älteren lernten zudem etwas über das Zusammenspiel der verschiedenen Parteien
+					(Jäger, Förster, Sportler, Spaziergänger, Landwirte) in einem Wald. Am letzten Abend wurde noch einmal groß gefeiert.
+					Es gab ein leckeres Fünf-Gänge-Menü und ein großes Lagerfeuer mit einem „Burning Wurzelsepp“ dessen Funken weit in den
+					Nachthimmel aufstiegen.<br /> Alles in allem war es ein gelungenes Sommerlager mit viel Spaß, Abenteuer und Singen am
+					Lagerfeuer, das allen Beteiligten lange in Erinnerung bleiben wird.</p>
+			</div>
+		</div>
+		<div role="article" class="newsArticle" id="press_51">
+			<div class="postDate"><span><a href="http://www.dpsg-hohenlinden.de/home/press/51">22. August 2016</a></span></div>
+			<h2 class="articleHeadline"><span>Sommerlager 2016 - Wurzeln schlagen</span></h2>
+			<div class="article bg">
+				<p class="icaption"> <a class="nobg zoomInCursor" href="http://www.dpsg-hohenlinden.de/files/2016/08/201608231408_Sola2016_Wurzelnschlagen.jpg"><img src="http://www.dpsg-hohenlinden.de/IMGresize/w860/files/2016/08/201608231408_Sola2016_Wurzelnschlagen.jpg" alt="Sonnenuntergang im Zeltlager"/></a>					<strong>Sonnenuntergang im Zeltlager</strong> </p>
+				<p class="press">Hallo liebe Eltern,<br /> uns geht es bis auf ein paar Blasen super. Wir haben sowohl die Anreise als auch das Wetter
+					gut überstanden.<br /> Da wir Pfadis schon einen Tag früher da waren, konnten wir unsere Zelte als erstes Aufbauen.
+					Leider mussten wir diese am nächsten Tag wieder umstellen.<br /> Als alle am Sonntag da waren, haben wir bis in den
+					Abend hinein die Zelte aufgebaut, unterbrochen von einer kleinen aber kräftigen Regenpause.<br /> Am Abend haben wir
+					uns mit Käsespätzle gestärkt um 21:00 Uhr gab es an unserer gemeinsamen Lagerfeuerrunde Schokobananen als Nachtisch.
+					<br /> Zwischen 22:00 Uhr und 24:00 Uhr sind dann alle langsam müde und kaputt in den Schlafsack gefallen. <br /> Heute
+					Morgen ging es schon um 7:25 Uhr für alle übermotivierten mit einem kleinen Trail-Run frisch und munter in den Tag.
+					Gemeinsam Frühstückten wir um 8:00 Uhr. Anschließend starteten wir um 9:00 Uhr in verschiedenen Gruppen unterteilt mit
+					dem Bau von Lagerbauten wie einem Bannerturms, Waschstation und Dusche, Sitzgelegenheiten, Recycling-Station, Volleyballfeld
+					und einer Brücke.<br /> Das Küchenteam hat fleißig gekocht und zwar einen supertollen Eintopf Namens Pichelsteiner.
+					<br /> Am Nachmittag ging es mit den Lagerbauten weiter und starteten auch mit neuen wie z.B. ein Lagertor oder einer
+					Chillout-Area.
+					<br /> Nachdem auch die Lagerfeuerbank und Sonnensegel aufgebaut waren, startete das Küchenteam die letzten Züge für
+					unser heutiges Grillen. Es gab viel Fleisch, Käsekrainer, Salat, Nudelsalat, Grillkartoffeln mit Tsatsiki. <br /> Die
+					Lagersau hat heute das Jupfi-Jungs Zelt bekommen, die dann super Spaßige Aufgaben erledigen durften ;).<br /> Geschrieben
+					von Leonie und Sophia aus der Pfadistufe. Angepasst von Sven Henry.</p>
+			</div>
+		</div>
+		<div role="article" class="newsArticle" id="news_320">
+			<div class="postDate"><span><a href="http://www.dpsg-hohenlinden.de/home/details/320">05. Juni 2016</a></span></div>
+			<h2 class="articleHeadline"><span>Jetzt anmelden zur Eltern-Aktion</span></h2>
+			<div class="article bg">Wir gehen mit euch auf Hike!<br />
+				<br />
+				<center><a href="http://www.dpsg-hohenlinden.de/files/2016/06/ElternAktionGross.pdf"><img src="http://www.dpsg-hohenlinden.de/files/2016/06/ElternAktionBild.png" alt="Eltern Aktion"/><br />
+--> als PDF</a></center>
+			</div>
+		</div>
+		<div role="article" class="newsArticle" id="press_49">
+			<div class="postDate"><span><a href="http://www.dpsg-hohenlinden.de/home/press/49">18. April 2016</a></span></div>
+			<h2 class="articleHeadline"><span>Erst Ramadama dann Stammesversammlung mit Kuratenwahl</span></h2>
+			<div class="article bg">
+				<p class="icaption"> <a class="nobg zoomInCursor" href="../files/2016/04/201604191344_StaVe_2016.jpg"><img src="http://www.dpsg-hohenlinden.de/IMGresize/w860../files/2016/04/201604191344_StaVe_2016.jpg" alt="Vorstandsteam (von links: Sven Henry Dorfmann, Katharina Fröhlich, Manuel Lux)"/></a>					<strong>Vorstandsteam (von links: Sven Henry Dorfmann, Katharina Fröhlich, Manuel Lux)</strong> </p>
+				<p class="press">Es war ein Wochenende voller Ereignisse für die Kinder und Jugendlichen des Pfadfinderstamms Impeesa Hohenlinden. Am
+					Samstag hat man zusammen mit der CSU und der ÜWH den Ort bei einem gemeinsamen Frühjahrsputz wieder auf Vordermann gebracht
+					und am Sonntag ging es dann gleich weiter mit der jährlichen Stammesversammlung. <br /> Auch beim dritten RammaDamma
+					in der Hohenlindener Geschichte, das vom CSU und ÜWH Ortsverband und den Pfadfindern für die ganze Gemeinde organisiert
+					wurde, waren viele Freiwillige aller Altersgruppen vertreten. <br /> Zusammen befreite man die Straßen und Wege vom
+					Müll. So wurden beispielsweise mehr als zehn alte Autoreifen aufgesammelt, die man in verschiedenen Waldstücken entlang
+					der Gemeindestraßen gefunden hatte. Mit einer Brotzeit bedankte sich die Gemeinde bei allen großen und kleinen Helfern.
+					<br /> Am darauffolgenden Tag ging es spannend weiter. Im gut gefüllten Gemeindesaal bei Kaffee und Kuchen wurde die
+					Stammesversammlung abgehalten. Die Kinder und Jugendlichen zeigten in kreativen und unterhaltsamen Einlagen, was sie
+					im vergangenen Jahr so alles erlebt hatten. Ferner stand das bislang unbesetzte Amt des Kuraten (kirchlicher Vorstand)
+					zur Wahl. Von nun an wird Katharina Fröhlich die beiden Vorstände, Sven Henry Dorfmann und Manuel Lux, in ihrer Arbeit
+					unterstützen. Nach der Wahl des neuen Elternbeirats wurde endlich der diesjährige Sommerlagerort verkündet.
+					<br /> 2016 werden die Hohenlindener Pfadfinder ihre Zelte im wunderschönen Isental, nahe Lengdorf, aufschlagen.</p>
+			</div>
+		</div>
+		<div role="article" class="newsArticle" id="news_319">
+			<div class="postDate"><span><a href="http://www.dpsg-hohenlinden.de/home/details/319">18. September 2015</a></span></div>
+			<h2 class="articleHeadline"><span>Feldgottesdienst mit Frühschoppen und Stufenwechsel</span></h2>
+			<div class="article bg">
+				<center><a href="http://www.dpsg-hohenlinden.de/files/2015/09/FeGo_StufenwechselEinladung.pdf"><img src="http://www.dpsg-hohenlinden.de/files/2015/09/FeGo_StufenwechselEinladung.JPG" alt="Wir nehmen wieder auf"/><br />
+--> als PDF</a></center>
+			</div>
+		</div>
+		<div role="article" class="newsArticle" id="news_318">
+			<div class="postDate"><span><a href="http://www.dpsg-hohenlinden.de/home/details/318">02. September 2015</a></span></div>
+			<h2 class="articleHeadline"><span>Wir nehmen wieder auf!</span></h2>
+			<div class="article bg">
+				<center><a href="http://www.dpsg-hohenlinden.de/files/2015/09/Wir nehmen wieder auf.pdf"><img src="http://www.dpsg-hohenlinden.de/files/2015/09/Wir nehmen wieder auf.jpg" alt="Wir nehmen wieder auf"/><br />
+--> als PDF</a></center>
+			</div>
+		</div>
+	</div>
+	<nav class="pagination">
+		<ul>
+			<li class="active"><a href="http://www.dpsg-hohenlinden.de/home/0">1</a></li>
+			<li class=""><a href="http://www.dpsg-hohenlinden.de/home/1">2</a></li>
+			<li class=""><a href="http://www.dpsg-hohenlinden.de/home/2">3</a></li>
+			<li class=""><a href="http://www.dpsg-hohenlinden.de/home/3">4</a></li>
+			<li class=""><a href="http://www.dpsg-hohenlinden.de/home/4">5</a></li>
+			<li class=""><a href="http://www.dpsg-hohenlinden.de/home/5">6</a></li>
+			<li class=""><a href="http://www.dpsg-hohenlinden.de/home/6">7</a></li>
+			<li class=""><a href="http://www.dpsg-hohenlinden.de/home/7">8</a></li>
+			<li class=""><a href="http://www.dpsg-hohenlinden.de/home/8">9</a></li>
+			<li class=""><a href="http://www.dpsg-hohenlinden.de/home/9">10</a></li>
+			<li class=""><a href="http://www.dpsg-hohenlinden.de/home/1">&gt;</a></li>
+		</ul>
+	</nav>
+
+	<script>
+		[...document.querySelectorAll('a.kehrmichum')].forEach(a => {
+			a.innerHTML = [...a.innerHTML].reverse().join('');
+			a.classList.remove('kehrmichum');
+			a.setAttribute('href', `mailto:${a.innerHTML}`);
+		});
+
+		document.querySelectorAll('input[type=checkbox].menu__hidden-checkbox').forEach(cb => {
+			cb.addEventListener('change', () => {
+				if (cb.checked) {
+					document.body.style.overflow = 'hidden';
+				} else {
+					document.body.style.overflow = 'auto';
+				}
+			});
+		});
+	</script>
+</body>
+
+</html>
