@@ -5,19 +5,14 @@
 	<meta charset="utf-8" />
 	<meta name="keywords" content="Pfadfinder Hohenlinden, Stamm Impeesa, Pfadfinder, Hohenlinden, Stamm, Impeesa, Termine, Kontakt, Fotos, Pfadiwissen, Downloads"
 	/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 	<title>Stamm Impeesa | DPSG Hohenlinden</title>
 
-	<style type="text/css">
-		@media(min-width: 640px) {
-			.press {
-				column-count: 2;
-			}
-		}
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css" />
 
-		@media(min-width: 1000px) {
-			.press {
-				column-count: 3;
-			}
+	<style type="text/css">
+		html {
+			font-size: 16px;
 		}
 
 		body {
@@ -27,6 +22,7 @@
 			font-weight: lighter;
 			padding: 0;
 			margin: 0;
+			overflow-x: hidden;
 		}
 
 		a {
@@ -47,14 +43,21 @@
 		h6 {
 			font-family: 'Raleway', sans-serif;
 			font-weight: lighter;
+			overflow-wrap: break-word;
+		}
+
+		h1 {
+			font-size: 6rem;
 		}
 
 		h2 {
-			font-size: 3em;
+			font-size: 3rem;
+			margin: 1rem 0;
 		}
 
 		h3 {
-			font-size: 1.5em;
+			font-size: 1.5rem;
+			margin: 1rem 0;
 		}
 
 		.menu__hidden-checkbox,
@@ -68,8 +71,8 @@
 		.menu__hidden-checkbox {
 			display: block;
 			z-index: 2;
-			width: 40px;
-			height: 40px;
+			width: 2.5rem;
+			height: 2.5rem;
 			opacity: 0;
 		}
 
@@ -78,9 +81,9 @@
 			flex-direction: column;
 			justify-content: space-around;
 			z-index: 1;
-			padding: 10px;
-			width: 20px;
-			height: 20px;
+			padding: .625rem;
+			width: 1.25rem;
+			height: 1.25rem;
 			background: #FFF;
 		}
 
@@ -91,13 +94,13 @@
 		.menu__sandwich-button span {
 			display: block;
 			width: 100%;
-			height: 2px;
+			height: .125rem;
 			background: rgba(0, 0, 0, .75);
 			transition: all .2s;
 		}
 
 		.menu__hidden-checkbox:not(:checked)~.menu {
-			transform: translateX(-100%);
+			transform: translateX(calc(-100% - 1.4em));
 		}
 
 		.menu__hidden-checkbox:checked~.menu__sandwich-button span:nth-child(1) {
@@ -115,7 +118,7 @@
 		}
 
 		.menu {
-			transition: transform .2s;
+			transition: transform .3s;
 			position: fixed;
 			display: flex;
 			flex-direction: column;
@@ -123,16 +126,18 @@
 			top: 0;
 			left: 0;
 			height: 100%;
+			width: calc(100% - 5rem);
+			box-shadow: 0.4em 0.4em 1em rgba(0, 0, 0, 0.3);
+			background: #FFF;
 		}
 
 		.menu>* {
-			padding: 10px;
+			padding: .65rem;
 			margin: 0;
 		}
 
 		.menu a {
 			display: block;
-			min-width: 20em;
 		}
 
 		.menu__top {
@@ -141,7 +146,7 @@
 
 		.menu__main {
 			border-bottom: 1px solid #E3E3E3;
-			margin-top: 40px;
+			margin-top: 2.6rem;
 		}
 
 		.menu ul li {
@@ -149,21 +154,20 @@
 		}
 
 		.menu a {
-			padding: 10px;
+			padding: .65rem;
 		}
 
-		.menu a:hover {
+		nav ul li a:hover {
 			background: #E3E3E3;
 		}
 
 		header,
 		header a {
-			margin-left: 2vw;
+			margin-left: 1.25rem;
 		}
 
 		header h1 {
 			position: relative;
-			font-size: 7vw;
 		}
 
 		header img {
@@ -171,7 +175,7 @@
 			z-index: -1;
 			top: 0;
 			left: 0;
-			width: 58vw;
+			width: 43rem;
 			transform: translate(-31.5%, -32.7%);
 		}
 
@@ -181,20 +185,20 @@
 		}
 
 		.main>div {
-			padding: 40px;
-			margin: 40px;
+			padding: 5rem;
+			margin: 2.5rem;
 		}
 
 		.main>div,
 		nav {
 			background: #FFF;
-			box-shadow: 5px 5px 5px rgba(0, 0, 0, .4);
+			box-shadow: 0.3em 0.3em 0.6em rgba(0, 0, 0, 0.3);
 		}
 
 		.main>div img {
 			display: block;
-			width: calc(100% + 80px);
-			margin-left: -40px;
+			width: calc(100% + 5rem);
+			margin-left: -2.5rem;
 		}
 
 		.main>div p {
@@ -205,24 +209,23 @@
 			display: block;
 			text-align: center;
 		}
-		
+
 		.pagination ul {
 			padding: 0;
 			margin: 0;
 			display: flex;
 			align-items: stretch;
 		}
-		
+
 		.pagination li {
-			list-style: none; 
+			list-style: none;
 			flex: 1 0 auto;
 		}
-		
+
 		.pagination a {
 			padding: 20px 0;
 			display: block;
 			text-align: center;
-			
 		}
 	</style>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Roboto|Roboto+Condensed" rel="stylesheet">
@@ -471,7 +474,7 @@
 		document.querySelectorAll('input[type=checkbox].menu__hidden-checkbox').forEach(cb => {
 			cb.addEventListener('change', () => {
 				if (cb.checked) {
-					document.body.style.overflow = 'hidden';
+					//document.body.style.overflow = 'hidden';
 				} else {
 					document.body.style.overflow = 'auto';
 				}
