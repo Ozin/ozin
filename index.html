@@ -23,6 +23,10 @@
 			padding: 0;
 			margin: 0;
 			overflow-x: hidden;
+			background-image: url(http://www.dpsg-hohenlinden.de/images/logo.gif);
+			background-position: -12.5em -11.2em;
+			background-size: 43rem;
+			background-repeat: no-repeat;
 		}
 
 		a {
@@ -47,7 +51,7 @@
 		}
 
 		h1 {
-			font-size: 6rem;
+			font-size: 3rem;
 		}
 
 		h2 {
@@ -64,7 +68,7 @@
 		.menu__sandwich-button {
 			position: fixed;
 			top: 0;
-			left: 0;
+			right: 0;
 			margin: 10px;
 		}
 
@@ -101,6 +105,10 @@
 
 		.menu__hidden-checkbox:not(:checked)~.menu {
 			transform: translateX(calc(-100% - 1.4em));
+		}
+
+		.menu__hidden-checkbox:checked~.menu__sandwich-button span {
+			margin-left: 0.2em;
 		}
 
 		.menu__hidden-checkbox:checked~.menu__sandwich-button span:nth-child(1) {
@@ -163,7 +171,8 @@
 
 		header,
 		header a {
-			margin-left: 1.25rem;
+			margin-left: 1rem;
+			display: block;
 		}
 
 		header h1 {
@@ -177,6 +186,7 @@
 			left: 0;
 			width: 43rem;
 			transform: translate(-31.5%, -32.7%);
+			display: none;
 		}
 
 		.kehrmichum {
@@ -185,20 +195,20 @@
 		}
 
 		.main>div {
-			padding: 5rem;
-			margin: 2.5rem;
+			padding: 1rem;
+			margin: 1rem;
 		}
 
 		.main>div,
 		nav {
 			background: #FFF;
-			box-shadow: 0.3em 0.3em 0.6em rgba(0, 0, 0, 0.3);
+			box-shadow: 0.3rem 0.3rem 0.6rem rgba(0, 0, 0, 0.3);
 		}
 
 		.main>div img {
 			display: block;
-			width: calc(100% + 5rem);
-			margin-left: -2.5rem;
+			width: calc(100% + 2rem);
+			margin-left: -1rem;
 		}
 
 		.main>div p {
