@@ -13,6 +13,10 @@
 	-->
 
 	<style type="text/css">
+		:root {
+			--page-spacing: 2rem;
+		}
+
 		html {
 			font-size: 16px;
 		}
@@ -26,7 +30,7 @@
 			margin: 0 auto;
 			overflow-x: hidden;
 			background-image: url(http://www.dpsg-hohenlinden.de/images/logo.gif);
-			background-position: -21.8rem -18.8rem;
+			background-position: -20.8rem -18.8rem;
 			background-size: 72rem;
 			background-repeat: no-repeat;
 			min-width: 360px;
@@ -72,8 +76,9 @@
 		.menu__sandwich-button {
 			position: fixed;
 			top: 0;
-			right: 0;
+			left: 0;
 			margin: 10px;
+			cursor: pointer;
 		}
 
 		.menu__hidden-checkbox {
@@ -138,8 +143,7 @@
 			top: 0;
 			left: 0;
 			height: 100%;
-			width: calc(100% - 5rem);
-			box-shadow: 0.4em 0.4em 1em rgba(0, 0, 0, 0.3);
+			box-shadow: 0.3rem 0.3rem 0.6rem rgba(0, 0, 0, 0.3);
 			background: #FFF;
 		}
 
@@ -169,13 +173,9 @@
 			padding: .65rem;
 		}
 
-		nav ul li a:hover {
-			background: #E3E3E3;
-		}
-
 		header,
 		header a {
-			margin-left: 1rem;
+			margin-left: var(--page-spacing);
 			display: block;
 		}
 
@@ -199,8 +199,8 @@
 		}
 
 		.main>div {
-			padding: 1rem;
-			margin: 1rem;
+			padding: var(--page-spacing);
+			margin: var(--page-spacing);
 		}
 
 		.main>div,
@@ -211,8 +211,8 @@
 
 		.main>div img {
 			display: block;
-			width: calc(100% + 2rem);
-			margin-left: -1rem;
+			width: calc(100% + var(--page-spacing));
+			margin-left: calc(var(--page-spacing) / -2);
 		}
 
 		.main>div p {
@@ -243,31 +243,31 @@
 		}
 
 		.press {
-			max-width: 340px;
+			max-width: 450px;
 			margin: 0 auto;
 			text-align: justify;
 		}
 
-		@media (min-width: 638px) {
+		@media (min-width: 700px) {
 			.press {
 				column-count: 2;
 				max-width: none;
 			}
 
 			.main>div {
-				padding: 4rem;
-				margin: 2rem;
+				padding: calc(2 * var(--page-spacing));
+				margin: var(--page-spacing);
 			}
 
 			.main>div img {
 				display: block;
 				width: calc(100% + 4rem);
-				margin-left: -2rem;
+				margin-left: calc(-1 * var(--page-spacing));
 			}
 
 			header,
 			header a {
-				margin-left: 2rem;
+				margin-left: var(--page-spacing);
 			}
 
 			body {
