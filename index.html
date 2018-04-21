@@ -14,7 +14,7 @@
 
 	<style type="text/css">
 		:root {
-			--page-spacing: 1rem;
+			--page-spacing: 2rem;
 		}
 
 		html {
@@ -30,7 +30,7 @@
 			margin: 0 auto;
 			overflow-x: hidden;
 			background-image: url(http://www.dpsg-hohenlinden.de/images/logo.gif);
-			background-position: -21.8rem -18.8rem;
+			background-position: -20.8rem -18.8rem;
 			background-size: 72rem;
 			background-repeat: no-repeat;
 			min-width: 360px;
@@ -179,6 +179,10 @@
 			display: block;
 		}
 
+		header a {
+			margin-right: var(--page-spacing);
+		}
+
 		header h1 {
 			position: relative;
 		}
@@ -248,7 +252,14 @@
 			text-align: justify;
 		}
 
-		@media (min-width: 700px) {
+		@media (min-width: 670px) {
+			body {
+				background-position: -10.35rem -8.9rem;
+				background-size: 39rem;
+			}
+		}
+
+		@media (min-width: 702px) {
 			.press {
 				column-count: 2;
 				max-width: none;
@@ -259,30 +270,9 @@
 				margin: var(--page-spacing);
 			}
 
-			.main>div img {
-				display: block;
-				width: calc(100% + 4rem);
-				margin-left: calc(-1 * var(--page-spacing));
-			}
-
 			header,
 			header a {
 				margin-left: var(--page-spacing);
-			}
-
-			body {
-				background-position-x: -20.8rem;
-			}
-		}
-
-		@media (min-width: 670px) {
-			:root {
-				--page-spacing: 2rem;
-			}
-
-			body {
-				background-position: -10.35rem -8.9rem;
-				background-size: 39rem;
 			}
 		}
 
