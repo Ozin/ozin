@@ -14,7 +14,7 @@
 
 	<style type="text/css">
 		:root {
-			--page-spacing: 2rem;
+			--page-spacing: 1rem;
 		}
 
 		html {
@@ -30,7 +30,7 @@
 			margin: 0 auto;
 			overflow-x: hidden;
 			background-image: url(http://www.dpsg-hohenlinden.de/images/logo.gif);
-			background-position: -20.8rem -18.8rem;
+			background-position: -21.8rem -18.8rem;
 			background-size: 72rem;
 			background-repeat: no-repeat;
 			min-width: 360px;
@@ -211,8 +211,8 @@
 
 		.main>div img {
 			display: block;
-			width: calc(100% + var(--page-spacing));
-			margin-left: calc(var(--page-spacing) / -2);
+			width: calc(100% + var(--page-spacing) * 2);
+			margin-left: calc(var(--page-spacing) / -1);
 		}
 
 		.main>div p {
@@ -276,6 +276,10 @@
 		}
 
 		@media (min-width: 670px) {
+			:root {
+				--page-spacing: 2rem;
+			}
+
 			body {
 				background-position: -10.35rem -8.9rem;
 				background-size: 39rem;
