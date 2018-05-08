@@ -260,6 +260,42 @@
 		}
 
 		@media (min-width: 44rem) {
+			.menu__hidden-checkbox, .menu__sandwich-button {
+				display: none;
+			}
+
+			.menu {
+				position: sticky;
+				flex-direction: row;
+			}
+
+			.menu .menu__main {
+				border-right: 1px solid #E3E3E3;
+				border-bottom: 0;
+			}
+
+			.menu .menu__main, .menu .menu__top {
+				display: flex;
+				margin: 0;
+				padding: 0 inherit;
+				flex-grow: 1;
+				justify-content: space-around;
+			}
+			
+			.menu .menu__main li, .menu .menu__top li {
+				justify-content: space-around;
+			}
+
+			.menu .menu__main a, .menu .menu__top a {
+				margin: 0;
+				padding: 0;
+			}
+
+			.menu__hidden-checkbox:not(:checked)~.menu, .menu__hidden-checkbox:checked~.menu {
+				transform: none;
+				transition: none;
+			}
+
 			.press {
 				column-count: 2;
 				max-width: none;
