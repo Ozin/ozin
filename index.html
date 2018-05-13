@@ -27,12 +27,8 @@
 			font-family: 'Open Sans', sans-serif;
 			font-weight: lighter;
 			padding: 0;
-			margin: 0 auto;
+			margin: 0;
 			overflow-x: hidden;
-			background-image: url("/images/logo.gif");
-			background-position: -20.8rem -18.8rem;
-			background-size: 72rem;
-			background-repeat: no-repeat;
 			min-width: 360px;
 			max-width: 1280px;
 		}
@@ -181,6 +177,22 @@
 			padding: .65rem;
 		}
 
+		header {
+			position: relative;
+		}
+
+		header::before {
+			background-image: url("/images/logo.gif");
+			background-repeat: no-repeat;
+			content: " ";
+			position: absolute;
+			z-index: -1;
+			width: 923px;
+			height: 885px;
+			transform: scale(var(--scale)) translate(-291px, -282px);
+			transform-origin: top left;
+		}
+
 		header,
 		header a {
 			margin-left: var(--page-spacing);
@@ -260,13 +272,6 @@
 			text-align: justify;
 		}
 
-		@media (min-width: 42.4375rem) {
-			body {
-				background-position: -10.35rem -8.9rem;
-				background-size: 39rem;
-			}
-		}
-
 		@media (min-width: 44rem) {
 			.menu__hidden-checkbox, .menu__sandwich-button {
 				display: none;
@@ -321,7 +326,7 @@
 			}
 
 			#menu__more-button__hidden-checkbox:not(:checked)~.menu__more-button::after {
-				content: ' ▿'
+				content: ' ▽'
 			}
 
 			#menu__more-button__hidden-checkbox~.menu__more-button::after {
@@ -356,11 +361,6 @@
 			}
 		}
 
-		@media (min-width: 80rem) {
-			body {
-				background-position-x: calc(50vw - 640px - 10.35rem);
-			}
-		}
 	</style>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Roboto|Roboto+Condensed" rel="stylesheet">
 </head>
@@ -606,15 +606,31 @@
 			a.setAttribute('href', `mailto:${a.innerHTML}`);
 		});
 
-		document.querySelectorAll('input[type=checkbox].menu__hidden-checkbox').forEach(cb => {
-			cb.addEventListener('change', () => {
-				if (cb.checked) {
-					//document.body.style.overflow = 'hidden';
-				} else {
-					document.body.style.overflow = 'auto';
-				}
-			});
-		});
+		(function (){
+			const r = /([0-9]+)\s*[a-zA-Z]*]/;
+			const sizeToFloat = size => parseFloat(r.test(size) ? r.exec(size)[1] : size);
+			const getComputedStyle = ele => window.getComputedStyle(ele)
+			const rootStyle = getComputedStyle(document.documentElement);
+			const rootFontSize = _ => sizeToFloat(rootStyle.fontSize);
+			const remToPx = rem => sizeToFloat(rem) * rootFontSize()
+			const pageSpacing = remToPx(rootStyle.getPropertyValue('--page-spacing'))
+
+			
+			const backgroundImageFieldHeight = 164;
+			const headerElement = document.querySelector("header");
+
+			function resizeLogo() {
+				const elementHeight = headerElement.offsetHeight;
+				const scale = (elementHeight + pageSpacing / 2) / backgroundImageFieldHeight;
+
+				headerElement.style.setProperty('--scale', scale);
+				
+			}
+
+			window.addEventListener('resize', resizeLogo);
+			resizeLogo()
+		})();
+
 	</script>
 </body>
 
