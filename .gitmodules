@@ -1,0 +1,3 @@
+[submodule "risiko-rechner"]
+	path = risiko-rechner
+	url = git@github.com:Ozin/risiko-rechner.git
